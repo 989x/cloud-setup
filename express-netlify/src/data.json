@@ -1,0 +1,49 @@
+[
+    {
+        "id": 1,
+        "type": "type",
+        "name": "name",
+        "detail": "detail",
+        "review": "review"
+    },
+
+    {
+        "id": 2,
+        "type": "type-2",
+        "name": "name-2",
+        "detail": "detail-2",
+        "review": "review-2"
+    },
+
+    {
+        "id": 3,
+        "type": "type-3",
+        "name": "name-3",
+        "detail": "detail-3",
+        "review": "review-3"
+    },
+
+    {
+        "id": 4,
+        "type": "type-4",
+        "name": "name-4",
+        "detail": "detail-4",
+        "review": "review-4"
+    },
+
+    {
+        "id": 5,
+        "type": "type-5",
+        "name": "name-5",
+        "detail": "detail-5",
+        "review": "review-5"
+    },
+
+    {
+        "id": 6,
+        "type": "type-6",
+        "name": "name-6",
+        "detail": "detail-6",
+        "review": "review-6"
+    }
+]
