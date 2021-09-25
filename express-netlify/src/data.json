@@ -7,6 +7,7 @@
     "results": [
         {
             "id": 1,
+            "image": "images/1.png",
             "type": "type",
             "name": "name",
             "detail": "detail",
@@ -15,6 +16,7 @@
     
         {
             "id": 2,
+            "image": "images/2.png",
             "type": "type-2",
             "name": "name-2",
             "detail": "detail-2",
@@ -23,6 +25,7 @@
     
         {
             "id": 3,
+            "image": "images/3.png",
             "type": "type-3",
             "name": "name-3",
             "detail": "detail-3",
@@ -31,6 +34,7 @@
     
         {
             "id": 4,
+            "image": "images/4.png",
             "type": "type-4",
             "name": "name-4",
             "detail": "detail-4",
@@ -39,6 +43,7 @@
     
         {
             "id": 5,
+            "image": "images/1.png",
             "type": "type-5",
             "name": "name-5",
             "detail": "detail-5",
@@ -47,6 +52,7 @@
     
         {
             "id": 6,
+            "image": "images/2.png",
             "type": "type-6",
             "name": "name-6",
             "detail": "detail-6",
