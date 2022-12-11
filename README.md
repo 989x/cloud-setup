@@ -4,8 +4,28 @@
 
 </br>
 
-### 🐬 Docker
-find many problems
+### 🎮 Amazon EC2 and NestJS
+> 
+NestJS - AWS EC2 con MongoDB Atlas
+- youtube: https://www.youtube.com/watch?v=c22bwrIu90A
+
+HugoRoca/nestjs-auth-passport-jwt
+- github: https://github.com/HugoRoca/nestjs-auth-passport-jwt/tree/mongodb
+
+Set port on ec2 
+
+![Screen Shot 2565-12-11 at 23 49 03](https://user-images.githubusercontent.com/73060136/206916993-604e1274-57ef-4c1a-82e3-72845c0bc50f.png)
+
+Command on ubuntu ec2
+```bash
+- Para actualizar 
+  - sudo apt update
+  - sudo apt upgrade
+- Para actualizar el bashrc: source ~/.bashrc
+- Para instalar LTS con NVM: nvm install --lts
+- Para realizar el redireccionamiento: 
+  - sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 3000
+```
 
 </br>
 
