@@ -68,5 +68,9 @@ ssh -i myec2key.pem ec2-user@ip
 ### Deploy docker
 
 Launch A Docker Container On A Single EC2 Instance
-> no dockerfile , use PuTTY , not secure
-- https://www.youtube.com/watch?v=cdqbPfGkUu4
+> no dockerfile and node file , use PuTTY , Nginx , not secure
+- youtube: https://www.youtube.com/watch?v=cdqbPfGkUu4
+
+How to Deploy a Docker App to AWS ECS
+> index.ts , docker , ecs , ec2 , not secure
+- youtube: https://www.youtube.com/watch?v=YDNSItBN15w
