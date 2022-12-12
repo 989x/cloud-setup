@@ -47,6 +47,6 @@ application_name you can use to give unique app name so that you can easily iden
 
 There are some PM2 commands to make your application auto restart after system reboot also
 ```bash
-$ pm2 startup systemd
+$ pm2 startup system
 $ pm2 save
 ```
