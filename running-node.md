@@ -18,7 +18,13 @@ In the above link you can find diferents tasks to perform if you need.
 
 Hope this help the newbies like me.
 
+</br>
 
+### sudo: npm: command not found
+- stackoverflow: https://stackoverflow.com/questions/31472755/sudo-npm-command-not-found
+```bash
+sudo apt-get install npm
+```
 
 </br>
 
