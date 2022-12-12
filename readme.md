@@ -1,6 +1,12 @@
-### 🐣 Creating a container image for use on Amazon ECS
+### 🐣 Another files
+Clone A Private Repository (github)
+- 
 
-> Amazon ECS uses Docker images in task definitions to launch containers. Docker is a technology that provides the tools for you to build, run, test, and deploy distributed applications in containers. 
+leave Node.js server on EC2 running forever
+- 
+
+set https on node server
+-
 
 </br>
 
