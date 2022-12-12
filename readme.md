@@ -1,12 +1,12 @@
 ### 🐣 Another files
 Clone A Private Repository (github)
-- 
+- https://github.com/SinsamutQ/ec2/blob/main/private-git.md
 
-leave Node.js server on EC2 running forever
-- 
+Leave Node.js server on EC2 running forever
+- https://github.com/SinsamutQ/ec2/blob/main/running-node.md
 
-set https on node server
--
+Set https on node server
+- https://github.com/SinsamutQ/ec2/blob/main/https.md
 
 </br>
 
