@@ -1,6 +1,6 @@
 ### Amazon S3 endpoint - 1
 
-How do you configure the endpoint for Amazon S3 by using the AWS SDK V2?
+How do you configure the endpoint for Amazon S3 by using the AWS SDK V2?   
 - https://stackoverflow.com/questions/68005239/how-do-you-configure-the-endpoint-for-amazon-s3-by-using-the-aws-sdk-v2
 
 Looking at the Javadocs here:
