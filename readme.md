@@ -11,7 +11,8 @@
 - [**EC2**](https://github.com/989x/cloundy/tree/main/EC2)
     - running-node.md
 - [**googlemap**](https://github.com/989x/cloundy/tree/main/googlemap)
-    - guideline
+    - dynamicmap.md
+    - staticmap.md
 - [**https**](https://github.com/989x/cloundy/tree/main/https)
     - https.md
 - [**privacy**](https://github.com/989x/cloundy/tree/main/privacy)
