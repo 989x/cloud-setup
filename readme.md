@@ -17,6 +17,8 @@
     - https.md
 - [**privacy**](https://github.com/989x/cloundy/tree/main/privacy)
     - private-git.md
+- [**stripe**](https://github.com/989x/cloundy/tree/main/stripe)
+    - ...
 - [**wasabi**](https://github.com/989x/cloundy/tree/main/wasabi)
     - connect
     - request-presigner
