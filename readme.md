@@ -5,11 +5,10 @@
 ### 目录
 
 - [**aws**](https://github.com/989x/cloundy/tree/main/aws)
+    - ec2
     - aws.md
 - [**DigitalOcean**](https://github.com/989x/cloundy/tree/main/DigitalOcean)
     - ...
-- [**EC2**](https://github.com/989x/cloundy/tree/main/EC2)
-    - running-node.md
 - [**googlemap**](https://github.com/989x/cloundy/tree/main/googlemap)
     - dynamicmap.md
     - staticmap.md
@@ -18,7 +17,8 @@
 - [**privacy**](https://github.com/989x/cloundy/tree/main/privacy)
     - private-git.md
 - [**stripe**](https://github.com/989x/cloundy/tree/main/stripe)
-    - ...
+    - guildline
+    - readme.md
 - [**wasabi**](https://github.com/989x/cloundy/tree/main/wasabi)
     - connect
     - request-presigner
