@@ -7,8 +7,10 @@
 - [**aws**](https://github.com/989x/cloundy/tree/main/aws)
     - ec2
     - aws.md
-- [**DigitalOcean**](https://github.com/989x/cloundy/tree/main/DigitalOcean)
+- [**digitalOcean**](https://github.com/989x/cloundy/tree/main/digitalOcean)
     - ...
+- [**git**](https://github.com/989x/cloundy/tree/main/git)
+    - renamefile.md
 - [**googlemap**](https://github.com/989x/cloundy/tree/main/googlemap)
     - dynamicmap.md
     - staticmap.md
