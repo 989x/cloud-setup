@@ -7,10 +7,10 @@ Welcome to the documentation hub for various Cloundy projects! Below is a struct
 ### Cloud Computing Platforms
 
 #### [**Amazon Web Services**](https://github.com/989x/cloundy/tree/main/AWS)
-- [EC2](https://github.com/989x/cloundy/tree/main/stripe/ec2)
+- [EC2](https://github.com/989x/cloundy/tree/main/aws/ec2)
   - Explore documentation related to AWS integration.
-#### [**Digital Ocean**](https://github.com/989x/cloundy/tree/main/DigitalOcean)
-- [Droplets Docker](https://github.com/989x/cloundy/tree/main/stripe/droplets-docker)
+#### [**Digital Ocean**](https://github.com/989x/cloundy/tree/main/digitalOcean)
+- [Droplets Docker](https://github.com/989x/cloundy/tree/main/digitalOcean/droplets-docker)
   - Discover resources for DigitalOcean platform integration.
 
 ### Payment And Cloud Storage Images
@@ -36,10 +36,10 @@ Welcome to the documentation hub for various Cloundy projects! Below is a struct
 
 ### Google Maps Integration
 
-#### [**Google Maps**](https://github.com/989x/cloundy/tree/main/googlemap)
-- [Dynamic Map](https://github.com/989x/cloundy/tree/main/googlemap/dynamicmap.md)
+#### [**Google Maps**](https://github.com/989x/cloundy/tree/main/googleMaps)
+- [Dynamic Map](https://github.com/989x/cloundy/tree/main/googleMaps/dynamic-map.md)
   - Documentation on dynamic Google Maps integration.
-- [Static Map](https://github.com/989x/cloundy/tree/main/googlemap/staticmap.md)
+- [Static Map](https://github.com/989x/cloundy/tree/main/googleMaps/static-map.md)
   - Explore how to integrate static Google Maps into your projects.
 
 ## Getting Started

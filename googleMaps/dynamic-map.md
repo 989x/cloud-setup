@@ -1,10 +1,16 @@
-### example 
+# Google Maps - Dynamic Map
 
-Simple Markers
-- https://developers.google.com/maps/documentation/javascript/examples/marker-simple
+Explore the dynamic map example below to integrate Google Maps into your web application.
 
-Try Sample, JSFiddle.net
-- https://jsfiddle.net/u80qd3nm/23/
+## Example 
+
+### Simple Markers
+
+Check out the [Simple Markers example](https://developers.google.com/maps/documentation/javascript/examples/marker-simple) in the official Google Maps documentation.
+
+### Try Sample on JSFiddle
+
+Use this [JSFiddle link](https://jsfiddle.net/u80qd3nm/23/) to interactively experiment with the dynamic map example.
 
 ```js
 /**

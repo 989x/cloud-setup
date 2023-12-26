@@ -1,7 +1,12 @@
-### example 
+# Google Maps - Static Map
 
-How I can make a static map with google-map-react in react?
-- https://stackoverflow.com/questions/66876496/how-i-can-make-a-static-map-with-google-map-react-in-react
+Explore examples and resources to create static maps using Google Maps in your React applications.
+
+## Creating a Static Map in React
+
+Visit the following Stack Overflow thread to understand how to create a static map with `google-map-react` in React:
+
+- [How I can make a static map with google-map-react in react?](https://stackoverflow.com/questions/66876496/how-i-can-make-a-static-map-with-google-map-react-in-react)
 
 `google-map-react` is written to use `Maps JavaScript API`. Please note that Maps JavaScript API is different from `Maps Static API`. If you would like to show a static map in your react code, you can just directly put the `Maps Static API` URL in the `src` parameter of your `<img/>` tag.
 
@@ -23,18 +28,19 @@ function App() {
 ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
+## Full Documentation for react-static-google-map
 
+Explore the full documentation for the `react-static-google-map` library to create static Google Maps images the React way.
 
-### full document
+- GitHub Repository: [bondz/react-static-google-map](https://github.com/bondz/react-static-google-map)
 
-react static google map
-- https://github.com/bondz/react-static-google-map
-
-Show Google Map static images the React way.
+Install the library using:
 
 ```bash
 yarn add react-static-google-map
 ```
+
+Usage examples:
 
 ```js
 import {
@@ -71,7 +77,7 @@ import {
 </StaticGoogleMap>
 ```
 
-Should render
+Rendered static maps:
 
 ```js
 <img class="img-fluid" src="https://maps.googleapis.com/maps/api/staticmap?size=600x600&scale=1&format=png&maptype=roadmap&markers=size:normal%7Ccolor:blue%7Clabel:P%7C6.4488387,3.5496361&key=YOUR_API_KEY">
