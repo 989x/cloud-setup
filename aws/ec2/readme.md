@@ -4,6 +4,8 @@
 
 Welcome to the AWS EC2 Guide! This guide provides useful files, commands, and references to help you navigate Amazon EC2 effectively.
 
+
+
 ## Useful Files
 
 Clone A Private Repository (GitHub)
@@ -14,6 +16,8 @@ Leave Node.js Server on EC2 Running Forever
 
 Set HTTPS on Node.js Server
 - [Setting Up HTTPS](https://github.com/SinsamutQ/ec2/blob/main/https.md)
+
+
 
 ## Amazon EC2 and NestJS
 
@@ -40,6 +44,8 @@ nvm install --lts
 sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 3000
 ```
 
+
+
 ## Useful References
 
 > Ensure a secure site with HTTPS
@@ -49,6 +55,8 @@ Learn how to get a free SSL Certificate on AWS with EC2 step by step using AWS C
 
 Discover how to secure your site with HTTPS and set up an SSL Certificate on AWS:
 - [YouTube Tutorial: Secure Your Site with HTTPS - SSL Certificate - AWS](https://www.youtube.com/watch?v=whtEehGeYvU)
+
+
 
 ## Additional References
 
