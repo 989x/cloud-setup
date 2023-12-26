@@ -1,76 +1,92 @@
-### 🐣 Another files
-Clone A Private Repository (github)
-- https://github.com/SinsamutQ/ec2/blob/main/private-git.md
+# AWS EC2 Guide
 
-Leave Node.js server on EC2 running forever
-- https://github.com/SinsamutQ/ec2/blob/main/running-node.md
+**Overview of Document**
 
-Set https on node server
-- https://github.com/SinsamutQ/ec2/blob/main/https.md
+Welcome to the AWS EC2 Guide! This guide provides useful files, commands, and references to help you navigate Amazon EC2 effectively.
 
-</br>
+## Useful Files
 
-### 🎮 Amazon EC2 and NestJS
-> 
-NestJS - AWS EC2 con MongoDB Atlas
-- youtube: https://www.youtube.com/watch?v=c22bwrIu90A
+Clone A Private Repository (GitHub)
+- [Private Git Repository Setup](https://github.com/SinsamutQ/ec2/blob/main/private-git.md)
+
+Leave Node.js Server on EC2 Running Forever
+- [Running Node.js Forever](https://github.com/SinsamutQ/ec2/blob/main/running-node.md)
+
+Set HTTPS on Node.js Server
+- [Setting Up HTTPS](https://github.com/SinsamutQ/ec2/blob/main/https.md)
+
+## Amazon EC2 and NestJS
+
+NestJS - AWS EC2 with MongoDB Atlas
+- [Watch the Tutorial](https://www.youtube.com/watch?v=c22bwrIu90A)
 
 HugoRoca/nestjs-auth-passport-jwt
-- github: https://github.com/HugoRoca/nestjs-auth-passport-jwt/tree/mongodb
-
-Set port on ec2 
-
-![Screen Shot 2565-12-11 at 23 49 03](https://user-images.githubusercontent.com/73060136/206916993-604e1274-57ef-4c1a-82e3-72845c0bc50f.png)
+- [GitHub Repository](https://github.com/HugoRoca/nestjs-auth-passport-jwt/tree/mongodb)
 
 Command on ubuntu ec2
+
 ```bash
-- Para actualizar 
-  - sudo apt update
-  - sudo apt upgrade
-- Para actualizar el bashrc: source ~/.bashrc
-- Para instalar LTS con NVM: nvm install --lts
-- Para realizar el redireccionamiento: 
-  - sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 3000
+# Update system
+sudo apt update
+sudo apt upgrade
+
+# Update bashrc
+source ~/.bashrc
+
+# Install LTS with NVM
+nvm install --lts
+
+# Redirect port 80 to 3000
+sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 3000
 ```
 
-</br>
+## Useful References
 
-### 🧸 Reff usefull
-> secure site with HTTPS
+> Ensure a secure site with HTTPS
 
-how to get free SSL Certificate on AWS with EC2 step by step | AWS Certificate Manager | Cloud Front
-- https://www.youtube.com/watch?v=YVbwVet8aI4
+Learn how to get a free SSL Certificate on AWS with EC2 step by step using AWS Certificate Manager and CloudFront:
+- [YouTube Tutorial: Get Free SSL Certificate on AWS with EC2](https://www.youtube.com/watch?v=YVbwVet8aI4)
 
-How to secure your site with HTTPS - SSL Certificate - AWS
-- https://www.youtube.com/watch?v=whtEehGeYvU
+Discover how to secure your site with HTTPS and set up an SSL Certificate on AWS:
+- [YouTube Tutorial: Secure Your Site with HTTPS - SSL Certificate - AWS](https://www.youtube.com/watch?v=whtEehGeYvU)
 
-</br>
+## Additional References
 
-### 🧸 Reff another
+### Connect to EC2 Instances
 
-### Connect ec2 
+**How to Use SSH on Your Mac with Terminal**
 
-How to Use SSH on Your Mac with Terminal
-> windows , sync Putty Demo on web
-- https://www.youtube.com/watch?v=SfTSBbaFN8Y
-```
+For Windows users, sync with Putty. Watch the tutorial:
+
+[YouTube Tutorial: How to Use SSH on Your Mac with Terminal](https://www.youtube.com/watch?v=SfTSBbaFN8Y)
+
+```bash
 ssh root@ip
 ```
 
-How to Connect to an EC2 Instance from your Mac Computer (For Mac Users Only)
-> macos , what ? myec2key.pem
-- https://www.youtube.com/watch?v=fsjs8XTi8JI
-```
+**How to Connect to an EC2 Instance from Your Mac Computer (For Mac Users Only)**
+
+For macOS users, use the myec2key.pem key. Watch the tutorial:
+
+[YouTube Tutorial: Connect to EC2 Instance from Your Mac](https://www.youtube.com/watch?v=fsjs8XTi8JI)
+
+```bash
 chmod 400 myec2key.pem
 ssh -i myec2key.pem ec2-user@ip
 ```
 
-### Deploy docker
+### Deploy Docker on EC2
 
-Launch A Docker Container On A Single EC2 Instance
-> no dockerfile and node file , use PuTTY , Nginx , not secure
-- youtube: https://www.youtube.com/watch?v=cdqbPfGkUu4
+**Launch a Docker Container on a Single EC2 Instance**
 
-How to Deploy a Docker App to AWS ECS
-> index.ts , docker , ecs , ec2 , not secure
-- youtube: https://www.youtube.com/watch?v=YDNSItBN15w
+Deploy a Docker container without a Dockerfile and Node file. Use PuTTY, Nginx, but note that it's not secure.
+
+[YouTube Tutorial: Launch a Docker Container on a Single EC2 Instance](https://www.youtube.com/watch?v=cdqbPfGkUu4)
+
+**How to Deploy a Docker App to AWS ECS**
+
+Learn to deploy a Docker app with an index.ts file on AWS ECS using EC2. Note that this setup is not fully secure.
+
+[YouTube Tutorial: Deploy a Docker App to AWS ECS](https://www.youtube.com/watch?v=YDNSItBN15w)
+
+Feel free to explore these references to enhance your AWS EC2 experience. Happy deploying! 🚀
