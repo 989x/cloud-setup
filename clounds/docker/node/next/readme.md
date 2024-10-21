@@ -1,27 +1,23 @@
-# Dockerizing a Next.js App
+### **Next.js Docker Tutorial**  
 
-This guide provides instructions for building and running a Dockerized Next.js application.
+For more detailed steps and explanations, you can refer to the original article:  
+[Dockerize a Next.js App](https://medium.com/@itsuki.enjoy/dockerize-a-next-js-app-4b03021e084d)  
 
-## Source
+- **dockerfile.tutorial** – Use this Dockerfile as a guide to create a basic Dockerized development environment for Next.js.
 
-For more detailed steps and explanations, you can refer to the original article: [Dockerize a Next.js App](https://medium.com/@itsuki.enjoy/dockerize-a-next-js-app-4b03021e084d)
+---
 
-## Build and Run
+### **Next.js Docker Example**  
 
-To build and run the Docker image for an INET server, follow these steps:
+Example Dockerfile from Vercel’s Next.js repository:  
+[Next.js Docker Example](https://github.com/vercel/next.js/blob/canary/examples/with-docker/Dockerfile)  
 
-1. **Build the Docker image**  
-   Use the following command to build the Docker image and tag it appropriately:
+- **dockerfile.example** – A practical example of how to structure a Next.js Docker setup.
 
-   ```bash
-   docker build -t git.inet.co.th:5555/inet_cms/inet_cms_frontend/uat:v0.0.1 .
-   ```
+---
 
-2. **Push the Docker image**  
-   Once the image is built, push it to your Docker registry:
+### **Production Dockerfile**  
 
-   ```bash
-   docker push git.inet.co.th:5555/inet_cms/inet_cms_frontend/uat:v0.0.1
-   ```
+For optimized deployments in a production environment, use:  
 
-Ensure that your Docker registry credentials are correctly configured before pushing the image.
+- **dockerfile.prod** – This version includes multi-stage builds for smaller images and better performance.
