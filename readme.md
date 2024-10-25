@@ -10,7 +10,7 @@ Welcome to the documentation hub for various Cloundy projects! Below is a struct
 - [EC2](https://github.com/989x/cloundy/tree/main/aws/ec2)
   - Explore documentation related to AWS integration.
 #### [**Digital Ocean**](https://github.com/989x/cloundy/tree/main/digitalOcean)
-- [Droplets Docker](https://github.com/989x/cloundy/tree/main/digitalOcean/droplets-docker)
+- [Droplets](https://github.com/989x/cloundy/tree/main/digitalocean/droplets)
   - Discover resources for DigitalOcean platform integration.
 
 ### Payment And Cloud Storage Images
