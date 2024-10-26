@@ -18,6 +18,12 @@ To display the public key, use:
 ❯ cat ~/.ssh/id_ed25519_digitalocean.pub
 ```
 
+# Access To Server
+
+```bash
+ssh -i /Users/userabc/.ssh/id_ed25519_digitalocean root@139.59.127.244
+```
+
 ---
 
 # Tutorial
