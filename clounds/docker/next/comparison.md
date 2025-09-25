@@ -1,11 +1,11 @@
-# **Dockerfile Comparison: prod vs. example**
+# Dockerfile Comparison: prod vs. example
 
-## **1. Overview**  
 This document compares two Dockerfiles used for Dockerizing a Next.js application:  
 - **`dockerfile.prod`**: Designed for production with a focus on simplicity and pnpm.  
 - **`dockerfile.example`**: A flexible example from Vercel’s Next.js repository, supporting multiple package managers and optimized builds.  
 
-## **2. Key Differences**  
+
+## Key Differences
 
 | **Aspect**             | **dockerfile.prod**                    | **dockerfile.example**                                 |
 |------------------------|----------------------------------------|--------------------------------------------------------|
@@ -18,7 +18,8 @@ This document compares two Dockerfiles used for Dockerizing a Next.js applicatio
 | **Telemetry Control**  | Not mentioned                          | Can disable telemetry during build and runtime         |
 | **Performance Focus**  | Basic production setup                 | Uses output file tracing for smaller image size        |
 
-## **3. Summary of Use Cases**  
+
+## Summary of Use Cases
 
 - **`dockerfile.prod`**:  
   - Ideal for **simple production deployments**.  
@@ -28,21 +29,23 @@ This document compares two Dockerfiles used for Dockerizing a Next.js applicatio
   - Useful for **flexible builds and testing environments**.  
   - Optimized for **smaller image sizes** using output tracing and supports multiple package managers.
 
-## **4. Example Commands for Each Dockerfile**  
 
-### **dockerfile.prod**  
+## Example Commands for Each Dockerfile
+
+### dockerfile.prod
 ```bash
 docker build -t nextjs-prod -f dockerfile.prod .
 docker run -p 3000:3000 nextjs-prod
 ```
 
-### **dockerfile.example**  
+### dockerfile.example
 ```bash
 docker build -t nextjs-example -f dockerfile.example .
 docker run -p 3000:3000 nextjs-example
 ```
 
-## **5. Conclusion**  
+
+## Conclusion
 Both Dockerfiles serve different purposes:  
 - **`dockerfile.prod`**: Simple and production-focused, using pnpm only.  
 - **`dockerfile.example`**: Flexible and optimized, useful for various development and production setups.

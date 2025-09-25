@@ -1,19 +1,16 @@
-### **Troubleshooting Slow Docker Build Times**
+# Troubleshooting Slow Docker Build Times
 
----
-
-### **1. Overview**  
 This guide provides methods to diagnose and resolve slow Docker build processes. If a build that normally takes 200 seconds now takes over 600 seconds, it suggests potential issues with network dependencies, caching, or Dockerfile optimization.
 
----
 
-### **2. Commands and Examples**
+## Commands and Examples
 
-#### **1. Identify the Step Causing Delay**  
+### 1. Identify the Step Causing Delay
+
 Based on the following log, the command consuming the most time is:
 
 ```bash
-❯ docker build -t git.inet.co.th:5555/inet_cms/inet_cms_frontend/uat:v0.0.46 . --no-cache
+❯ docker build -t ${REGISTRY_HOST}/${NAMESPACE}/${IMAGE}/${ENV}:${TAG} . --no-cache
 [+] Building 620.5s (5/19)                                                           docker:desktop-linux
  => [internal] load build definition from Dockerfile                                                 0.0s
  => => transferring dockerfile: 1.12kB                                                               0.0s
@@ -34,9 +31,8 @@ Based on the following log, the command consuming the most time is:
 
 The delay occurs in the `RUN apk add` step, indicating that the installation of dependencies may be the bottleneck.
 
----
+### 2. Check Network Connectivity
 
-#### **2. Check Network Connectivity**  
 Network issues may cause delays when installing dependencies. Verify that your internet connection is stable:
 
 ```bash
@@ -49,18 +45,16 @@ Alternatively, try setting a different mirror to speed up the package download:
 RUN apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/v3.18/main g++ make py3-pip libc6-compat
 ```
 
----
+### 3. Enable Caching
 
-#### **3. Enable Caching**  
 Although the `--no-cache` flag is used, it may not be necessary if the Dockerfile rarely changes. Rebuild without the `--no-cache` flag to use cached layers:
 
 ```bash
-docker build -t git.inet.co.th:5555/inet_cms/inet_cms_frontend/uat:v0.0.46 .
+docker build -t ${REGISTRY_HOST}/${NAMESPACE}/${IMAGE}/${ENV}:${TAG} .
 ```
 
----
+### 4. Optimize the Dockerfile Using Multi-stage Builds
 
-#### **4. Optimize the Dockerfile Using Multi-stage Builds**  
 Reduce the build time by using multi-stage builds to limit dependencies to only what is required for the final image:
 
 ```Dockerfile
@@ -73,9 +67,8 @@ COPY --from=build /app /app
 CMD ["node", "/app/index.js"]
 ```
 
----
+### 5. Minimize Docker Context Size
 
-#### **5. Minimize Docker Context Size**  
 Ensure that only necessary files are included in the build context. Review the `.dockerignore` file to exclude unnecessary files:
 
 ```bash
@@ -85,18 +78,17 @@ node_modules
 *.log
 ```
 
----
+### 6. Use Docker BuildKit to Improve Performance
 
-#### **6. Use Docker BuildKit to Improve Performance**  
 Docker BuildKit can speed up the build process with parallel execution and caching improvements:
 
 ```bash
-DOCKER_BUILDKIT=1 docker build -t git.inet.co.th:5555/inet_cms/inet_cms_frontend/uat:v0.0.46 .
+DOCKER_BUILDKIT=1 docker build -t ${REGISTRY_HOST}/${NAMESPACE}/${IMAGE}/${ENV}:${TAG} .
 ```
 
----
 
-### **3. Conclusion**  
-If the build process is still slow after following these steps, check your machine’s resources (CPU, RAM, disk space) or Docker’s resource allocation. Additionally, ensure that no network proxies or firewalls are interfering with the package download. 
+## Conclusion
+
+If the build process is still slow after following these steps, check your machine’s resources (CPU, RAM, disk space) or Docker’s resource allocation. Additionally, ensure that no network proxies or firewalls are interfering with the package download.
 
 By identifying bottlenecks in the build process and applying the above optimizations, you can significantly reduce build times and improve efficiency.
