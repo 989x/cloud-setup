@@ -1,41 +1,49 @@
-# 目录 
+# 目录
 
 **Cloundy Overview 🌥️**
 
-Welcome to the documentation hub for various Cloundy projects! Below is a structured table of contents to help you navigate and explore the documentation for different areas.
+Welcome to the documentation hub. Use the table of contents below to navigate across cloud providers, Docker recipes, and service APIs.
+
 
 ## Cloud Computing Platforms
 
-### [**Amazon Web Services**](https://github.com/989x/cloud-setup/tree/main/AWS)
-- [EC2](https://github.com/989x/cloud-setup/tree/main/aws/ec2)
-  - Explore documentation related to AWS integration.
-### [**Digital Ocean**](https://github.com/989x/cloud-setup/tree/main/digitalOcean)
-- [Droplets](https://github.com/989x/cloud-setup/tree/main/digitalocean/droplets)
-  - Discover resources for DigitalOcean platform integration.
+### [**Amazon Web Services**](./cloud-platforms/aws)
+- Explore documentation related to AWS integration.
 
-## Payment And Cloud Storage Images
+### [**DigitalOcean**](./cloud-platforms/digitalocean)
+- [Droplets](./cloud-platforms/digitalocean/droplets)
+  - Setup and operations guides for DigitalOcean Droplets.
 
-### [**Stripe**](https://github.com/989x/cloud-setup/tree/main/stripe)
-- [Guidelines](https://github.com/989x/cloud-setup/tree/main/stripe/guideline)
-  - Get started with guidelines for Stripe integration.
-### [**Wasabi**](https://github.com/989x/cloud-setup/tree/main/wasabi)
-- [Connect](https://github.com/989x/cloud-setup/tree/main/wasabi/connect)
-  - Explore Wasabi connection documentation.
-- [Request Presigner](https://github.com/989x/cloud-setup/tree/main/wasabi/request-presigner)
-  - Learn about Wasabi request presigning.
-- [Upload](https://github.com/989x/cloud-setup/tree/main/wasabi/upload)
-  - Find information on uploading to Wasabi.
+### [**INET (Thailand)**](./cloud-platforms/inet)
+- Notes and practices tailored for INET as a Thai cloud provider.
 
-## Google Maps Integration
-
-### [**Google Maps**](https://github.com/989x/cloud-setup/tree/main/googleMaps)
-- [Dynamic Map](https://github.com/989x/cloud-setup/tree/main/googleMaps/dynamic-map.md)
-  - Documentation on dynamic Google Maps integration.
-- [Static Map](https://github.com/989x/cloud-setup/tree/main/googleMaps/static-map.md)
-  - Explore how to integrate static Google Maps into your projects.
 
 ## Docker
 
-### [**Docker**](https://github.com/989x/cloud-setup/tree/main/docker)
-- [next](https://github.com/989x/cloud-setup/tree/main/docker/next)
-  - Provides Docker configurations for deploying a Next.js application.
+### [**Docker → Next.js**](./docker/next)
+- [comparison.md](./docker/next/comparison.md) — Compare Docker approaches for Next.js.
+- [dockerfile.example](./docker/next/dockerfile.example) — Minimal example Dockerfile.
+- [dockerfile.prod](./docker/next/dockerfile.prod) — Production-ready Dockerfile.
+- [dockerfile.tutorial](./docker/next/dockerfile.tutorial) — Step-by-step tutorial Dockerfile.
+- [readme.md](./docker/next/readme.md) — Usage overview and conventions.
+- **Troubleshooting**
+  - [platform_mismatch.md](./docker/next/troubleshooting/platform_mismatch.md)
+  - [pnpm_next_ci.md](./docker/next/troubleshooting/pnpm_next_ci.md)
+  - [slow-docker-builds.md](./docker/next/troubleshooting/slow-docker-builds.md)
+
+
+## Service APIs
+
+### [**Google Maps**](./service-apis/googlemap)
+- Dynamic & static map integration notes.
+
+### [**Stripe**](./service-apis/stripe)
+- Payment integration guidelines and references.
+
+### [**Wasabi**](./service-apis/wasabi)
+- Connect, presigned requests, and upload workflows.
+
+
+## Project Index
+
+- [Root README](./readme.md) — You are here.
