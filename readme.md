@@ -20,7 +20,7 @@ Welcome to the documentation hub. Use the table of contents below to navigate ac
 
 ## Docker
 
-### [**Docker → Next.js**](./docker/next)
+### [**Next.js**](./docker/next)
 - [comparison.md](./docker/next/comparison.md) — Compare Docker approaches for Next.js.
 - [dockerfile.example](./docker/next/dockerfile.example) — Minimal example Dockerfile.
 - [dockerfile.prod](./docker/next/dockerfile.prod) — Production-ready Dockerfile.
@@ -42,6 +42,12 @@ Welcome to the documentation hub. Use the table of contents below to navigate ac
 
 ### [**Wasabi**](./service-apis/wasabi)
 - Connect, presigned requests, and upload workflows.
+
+
+## Prompts & Conventions
+
+### [**Git Commit Message Format**](./prompts/git_commit.md)
+- Conventional Commits subject line with a structured body (**Why / What / Breaking changes**), plus ready-to-copy examples.
 
 
 ## Project Index
