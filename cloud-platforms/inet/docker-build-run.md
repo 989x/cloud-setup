@@ -29,18 +29,33 @@ It’s tailored for INET’s private registry (e.g. `git.inet.co.th:5555`) and c
 
 ## Log in to INET Registry
 
+**Required scopes:** `read_registry`, `write_registry`.
+
+- Use your **Personal Access Token (PAT)** as the password (not group/project tokens).  
+- Group/project tokens have inconsistent permissions here. Create a PAT with `read_registry` (pull) and `write_registry` (push).
+
 ```bash
 docker login git.inet.co.th:5555
-# Enter username and password when prompted
+# Username: <your GitLab username>
+# Password: <your Personal Access Token>
 ```
 
 
 ## Build & Tag the Docker Image
 
+Use `--provenance=false` to disable BuildKit attestations (prevents some INET/Harbor digest errors).
 Run this in the project root where your `Dockerfile` lives.
 
 ```bash
-docker build -t git.inet.co.th:5555/inet_cms/inet_cms_frontend/uat:v0.0.17 .
+docker build --provenance=false \
+  -t git.inet.co.th:5555/inet_cms/inet_cms_frontend/uat:v0.0.17 .
+```
+
+*Apple Silicon → x86_64 servers:*
+
+```bash
+docker build --platform=linux/amd64 --provenance=false \
+  -t git.inet.co.th:5555/inet_cms/inet_cms_frontend/uat:v0.0.17 .
 ```
 
 * `-t` tags the resulting image.
@@ -49,8 +64,16 @@ docker build -t git.inet.co.th:5555/inet_cms/inet_cms_frontend/uat:v0.0.17 .
 **Example (another project):**
 
 ```bash
-docker build -t git.inet.co.th:5555/kanya.lo/cast_survay_admin_fontend/uat:v0.03 .
+docker build --provenance=false \
+  -t git.inet.co.th:5555/kanya.lo/cast_survay_admin_fontend/uat:v0.03 .
 ```
+
+> Older Docker/BuildKit that lacks `--provenance`:
+>
+> ```bash
+> DOCKER_BUILDKIT=0 docker build \
+>   -t git.inet.co.th:5555/inet_cms/inet_cms_frontend/uat:v0.0.17 .
+> ```
 
 
 ## Push the Docker Image
@@ -80,7 +103,7 @@ docker images
 docker pull git.inet.co.th:5555/kanya.lo/cast_survay_admin_fontend/uat:v0.03
 ```
 
-**Run (map host\:container ports):**
+**Run (map host:container ports):**
 
 ```bash
 docker run -d -p 8080:80 git.inet.co.th:5555/kanya.lo/cast_survay_admin_fontend/uat:v0.03
@@ -98,8 +121,9 @@ docker run -d -p 8080:80 git.inet.co.th:5555/kanya.lo/cast_survay_admin_fontend/
 # login
 docker login git.inet.co.th:5555
 
-# build
-docker build -t git.inet.co.th:5555/inet_cms/inet_cms_frontend/uat:v0.0.17 .
+# build (disable provenance)
+docker build --provenance=false \
+  -t git.inet.co.th:5555/inet_cms/inet_cms_frontend/uat:v0.0.17 .
 
 # push
 docker push git.inet.co.th:5555/inet_cms/inet_cms_frontend/uat:v0.0.17
@@ -115,3 +139,24 @@ docker login git.inet.co.th:5555
 docker pull git.inet.co.th:5555/kanya.lo/cast_survay_admin_fontend/uat:v0.03
 docker run -d -p 8080:80 git.inet.co.th:5555/kanya.lo/cast_survay_admin_fontend/uat:v0.03
 ```
+
+
+## Quick Troubleshooting
+
+* **Error:** Login/push fails due to missing scopes (e.g., `insufficient_scope`, `read_registry`, `write_registry`) when using a group/project token.
+  **Fix:** Create a **Personal Access Token (PAT)** with `read_registry` and `write_registry` scopes, then re-login:
+
+  ```bash
+  docker logout git.inet.co.th:5555
+  docker login git.inet.co.th:5555
+  # Username: <your GitLab username>
+  # Password: <your Personal Access Token>
+  ```
+
+* **Error:** `Digest: Not applicable., Invalid tag: missing manifest digest`
+  **Fix:** Rebuild with `--provenance=false` (or `DOCKER_BUILDKIT=0`) and push again. If needed:
+
+  ```bash
+  docker build --no-cache --provenance=false -t <image:tag> . && docker push <image:tag>
+  ```
+  
