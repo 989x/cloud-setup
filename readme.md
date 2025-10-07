@@ -8,14 +8,21 @@ Welcome to the documentation hub. Use the table of contents below to navigate ac
 ## Cloud Computing Platforms
 
 ### [**Amazon Web Services**](./cloud-platforms/aws)
+
 - Explore documentation related to AWS integration.
 
 ### [**DigitalOcean**](./cloud-platforms/digitalocean)
+
 - [Droplets](./cloud-platforms/digitalocean/droplets)
   - Setup and operations guides for DigitalOcean Droplets.
 
 ### [**INET (Thailand)**](./cloud-platforms/inet)
-- Notes and practices tailored for INET as a Thai cloud provider.
+
+- [Plugin Deployment](./cloud-platforms/inet/plugin-deploy.md)
+- [Docker Build & Run](./cloud-platforms/inet/docker-build-run.md)
+- Infra
+  - [MinIO Deployment](./cloud-platforms/inet/infra/minio-deployment.md)
+  - [Monitoring (Prometheus)](./cloud-platforms/inet/infra/monitoring-prometheus.md)
 
 
 ## Docker
