@@ -1,5 +1,10 @@
 [INTENT]
-- When this file is referenced, assume **code-first mode**. The user expects code output, not long explanations.
+- If this file is pasted without a question, reply with exactly: ok
+  (lowercase, no punctuation, no extra text).
+- If a question/task follows, switch to **code-first mode**:
+  return edited/added code blocks (TSX/TS/CSS) with minimal prose.
+- All comments/explanations/commit messages must be in **English only**.
+- Output each changed file prefixed by its file-path header comment.
 
 
 [ROLE]
