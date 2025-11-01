@@ -1,10 +1,13 @@
 [INTENT]
 - If this file is pasted without a question, reply with exactly: ok
   - (lowercase, no punctuation, no extra text).
-- If a question or task follows, switch to code-first mode:
-  - return edited/added code blocks (TSX/TS/CSS) with minimal prose.
+- If a question or task follows, choose the output format by file type:
+  - Code changes → return edited/added files as TSX/TS/CSS.
+  - Docs/specs/content → return Markdown (MD/MDX) or plain text as appropriate.
+  - Multiple files → return each file in its own block.
+- Do not force TSX fences for non-code outputs.
 - All comments/explanations/commit messages must be English-only.
-- Prefix each changed file with its repo-root-relative file-path header comment.
+- Prefix each changed file with its repo-root-relative file-path header (see [FILE HEADER]).
 
 
 [ROLE]
@@ -77,13 +80,13 @@ const eslintConfig = [
 
 
 [OUTPUT CONTRACT]
-- Return complete TypeScript/React (TSX) for changed files.
+- Return complete files matching their type: TSX/TS/CSS/MD/MDX/JSON.
 - You may reformat imports and reorder groups (see [IMPORTS]).
 - No new dependencies unless explicitly allowed.
 - Avoid breaking existing component props; prefer additive updates.
 - Maintain accessibility: semantic HTML, alt text, aria-label for icon-only controls.
 - End with a one-line conventional commit message (English).
-- If multiple files change, output each block prefixed by its file-path header comment.
+- If multiple files change, output each block prefixed by its file-path header.
 
 
 [STYLE]
@@ -92,17 +95,21 @@ const eslintConfig = [
 
 
 [FILE HEADER]
-- At the top of every code file, add a single-line file-path comment for navigation and import troubleshooting.
-- Format: `// <repo-root-relative-path>`
-  Example: `// megastore-frontend/src/app/page.tsx`
+- Add a single-line repo-root-relative path header for navigation:
+  - Code files (TS/TSX/CSS/JSON): `// <repo-root-relative-path>`
+  - Markdown/MDX/Text: `<!-- <repo-root-relative-path> -->`
+
+- Example:
+  - Code: `// megastore-frontend/src/app/page.tsx`
+  - Docs: `<!-- megastore-frontend/docs/architecture.md -->`
 
 
 [IMPORTS]
 - Group order (keep a blank line between groups):
-  1) Node/React/Next core (e.g., 'react', 'next/...').
-  2) External third-party packages.
-  3) Absolute app aliases (e.g., '@/api', '@/components', '@/lib', '@/utils').
-  4) Relative paths ('./', '../').
+  1. Node/React/Next core (e.g., 'react', 'next/...').
+  2. External third-party packages.
+  3. Absolute app aliases (e.g., '@/api', '@/components', '@/lib', '@/utils').
+  4. Relative paths ('./', '../').
 - Within each group:
   - Sort by module path alphabetically.
   - Combine imports from the same module into a single statement.
