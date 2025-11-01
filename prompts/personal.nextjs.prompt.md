@@ -47,8 +47,26 @@ src/
   - Co-locate feature-specific pieces under `components/pages/*` where practical.
   - Keep UI primitives in `components/ui`; compose them upward.
   - Put business logic/adapters in `lib/`, not inside components.
-  - Keep remote clients in `api/` and **state** in `stores/`.
-  - **Helpers** go to `utils/` (pure, unit-testable).
+  - Keep remote clients in `api/` and state in `stores/`.
+  - Helpers go to `utils/` (pure, unit-testable).
+
+
+[ESLINT CONFIG]
+- Rationale: This project iterates rapidly; allow `any` project-wide when a function or code path reaches medium or higher complexity (e.g., nested functions, heavy generics, polymorphic adapters) to reduce debugging/maintenance risk under delivery timelines. Prefer strict types where feasible.
+
+```ts
+// eslint.config (excerpt)
+
+const eslintConfig = [
+  // Permit `any` across the project to unblock complex implementations.
+  {
+    files: ['**/*.{ts,tsx}'],
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'off',
+    },
+  },
+];
+```
 
 
 [PERFORMANCE RULES]
