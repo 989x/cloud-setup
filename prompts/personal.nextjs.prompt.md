@@ -85,7 +85,7 @@ const eslintConfig = [
 - No new dependencies unless explicitly allowed.
 - Avoid breaking existing component props; prefer additive updates.
 - Maintain accessibility: semantic HTML, alt text, aria-label for icon-only controls.
-- End with a one-line conventional commit message (English).
+- Do NOT include a commit message unless explicitly requested. If asked to respond with a git commit, end with a one-line conventional commit message (English).
 - If multiple files change, output each block prefixed by its file-path header.
 
 
