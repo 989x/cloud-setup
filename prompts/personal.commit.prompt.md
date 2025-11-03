@@ -68,13 +68,13 @@
   <type>(<scope>): <summary>
 
   Why
-  * ...
+  - ...
 
   What
-  * ...
+  - ...
 
   Breaking changes (optional)
-  * ...
+  - ...
   ```
 
 [EXAMPLES]
@@ -83,24 +83,24 @@
   feat(api,app): unify getAll* helpers with strong types; add 'View all' CTAs
 
   Why
-  * Remove duplicated “latest N” helpers and simplify wiring.
-  * Provide consistent, strongly typed data access across the app.
+  - Remove duplicated “latest N” helpers and simplify wiring.
+  - Provide consistent, strongly typed data access across the app.
 
   What
-  * src/api/*: add types + getAll*() helpers (mock-backed).
-  * App pages: refactor to use getAll*(); add category links and CTAs.
+  - src/api/*: add types + getAll*() helpers (mock-backed).
+  - App pages: refactor to use getAll*(); add category links and CTAs.
 
   Breaking changes
-  * Deprecated getLatest*/getTop* helpers; replaced with getAll*().
+  - Deprecated getLatest*/getTop* helpers; replaced with getAll*().
 
 - Fix — stabilize listing keys and slice bounds
   fix(app/catalog): correct key prop and slice bounds in listing
 
   Why
-  * Prevent React key warnings and ensure stable rendering.
+  - Prevent React key warnings and ensure stable rendering.
 
   What
-  * Use composite keys; clamp slice to available length.
+  - Use composite keys; clamp slice to available length.
   ```
 
 - UX — responsive breadcrumbs & category page
@@ -109,17 +109,17 @@
   and mock sort/pagination
 
   Why
-  * Improve mobile usability and discoverability; keep user context.
+  - Improve mobile usability and discoverability; keep user context.
 
   What
-  * components/Breadcrumbs.tsx: truncation + ARIA labels, reused across pages.
-  * app/blog/page.tsx: add 3 categories (static slugs) linking to
+  - components/Breadcrumbs.tsx: truncation + ARIA labels, reused across pages.
+  - app/blog/page.tsx: add 3 categories (static slugs) linking to
     /blog/category/[slug].
-  * app/blog/category/sme/page.tsx: hero + listing via getAllPosts();
+  - app/blog/category/sme/page.tsx: hero + listing via getAllPosts();
     dropdown sort (query string), condensed pagination UI.
 
   Breaking changes
-  * None.
+  - None.
   ```
 
 - Small change — single-line
