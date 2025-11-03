@@ -1,23 +1,30 @@
 [INTENT]
-- This file is commit-only. Use it only when the user requests a git commit message.
+
+- This file is commit-only. Use it only when the user requests a git
+  commit message.
 - If this file is pasted without a question, reply with exactly: ok
   (lowercase, no punctuation, no extra text).
-- When asked for a commit, return **only the commit message** (subject line and optional body) in English. Avoid explanations or prefaces.
+- When asked for a commit, return only the commit message (subject line
+  and optional body) in English, wrapped in a fenced code block:
+  ```txt
+  ...commit message...
+  ```
 - For non-commit tasks, ignore this file and defer to other prompt files.
 
-
 [LANGUAGE]
+
 - English-only. Use plain ASCII punctuation (no smart quotes).
 - Keep lines wrapped at ~72 characters.
 
-
 [FORMAT]
-- Subject (Conventional Commits v1.0.0):
-  <type>(<scope>): <short, imperative summary>
 
+- Always wrap the entire output in a single ```txt fenced block.
+- Subject (Conventional Commits v1.0.0): <type>(<scope>): <short, imperative summary>
 
 [BODY SECTIONS]
+
 - Include sections that apply. Omit ones that don’t.
+
 - Order:
   Why
   <why this change is needed>
@@ -28,8 +35,8 @@
   Breaking changes (optional)
   <only if behavior/API is breaking>
 
-
 [TYPES]
+
 - feat – new feature
 - fix – bug fix
 - docs – documentation only
@@ -41,20 +48,23 @@
 - chore – maintenance (no src/test changes)
 - revert – revert a previous commit
 
-
 [RULES]
-- Use present tense, imperative mood: “add”, “refactor”, “remove”.
+
+- Use present tense, imperative mood: "add", "refactor", "remove".
 - Subject ≤ 72 chars, no trailing period.
 - `scope` is optional but recommended (e.g., `api`, `app/catalog`, `deps`).
 - Wrap body lines at ~72 chars.
 - Omit sections that don’t apply.
 
-
 [TEMPLATES]
+
 - Single-line (small change):
+  ```txt
   <type>(<scope>): <summary>
+  ```
 
 - Multi-section (recommended for non-trivial changes):
+  ```txt
   <type>(<scope>): <summary>
 
   Why
@@ -65,10 +75,11 @@
 
   Breaking changes (optional)
   * ...
-
+  ```
 
 [EXAMPLES]
 - Feature — unify data fetchers & add CTAs
+  ```txt
   feat(api,app): unify getAll* helpers with strong types; add 'View all' CTAs
 
   Why
@@ -90,8 +101,10 @@
 
   What
   * Use composite keys; clamp slice to available length.
+  ```
 
 - UX — responsive breadcrumbs & category page
+  ```txt
   feat(app/blog,components): add categories page, responsive breadcrumbs,
   and mock sort/pagination
 
@@ -107,12 +120,14 @@
 
   Breaking changes
   * None.
+  ```
 
 - Small change — single-line
+  ```txt
   chore(ui): fine-tune h1 spacing on hero for better fold fit
-
-
+  ```
 [PRIMARY REFERENCES]
+
 - Conventional Commits v1.0.0: https://www.conventionalcommits.org/en/v1.0.0/
 - Keep a Changelog: https://keepachangelog.com/en/1.1.0/
 - SemVer: https://semver.org/
